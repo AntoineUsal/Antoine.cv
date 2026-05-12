@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Antoine USAL</title>
     <style>
-        /* --- 1. VARIABLES & RESET --- */
         :root {
             --bg-color: #0f172a;       
             --card-bg: #1e293b;        
@@ -33,7 +32,6 @@
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
 
-        /* --- 2. NAVIGATION --- */
         nav {
             position: fixed; top: 0; left: 0; width: 100%;
             background-color: var(--nav-bg);
@@ -48,7 +46,6 @@
         }
         .nav-links a:not(.btn-style):hover { color: var(--primary); }
 
-        /* Style des boutons dans le menu */
         .contact-btn { 
             border: 1px solid var(--primary); 
             padding: 6px 18px !important; 
@@ -73,12 +70,10 @@
         }
         .cv-nav-btn:hover { background: rgba(255,255,255,0.2); color: #fff !important; }
 
-        /* --- 3. STRUCTURE --- */
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         section { padding: 90px 0; border-bottom: 1px solid rgba(255,255,255,0.02); position: relative; z-index: 1; }
         .section-title { font-size: 2.2rem; margin-bottom: 50px; text-align: center; color: var(--primary); }
 
-        /* --- 4. HERO & NUAGE DE TAGS --- */
         header {
             min-height: 90vh;
             display: flex;
@@ -117,7 +112,6 @@
             min-height: 1.6em;
         }
 
-        /* --- STYLES DU NUAGE ORBITAL --- */
         .tag-cloud-container {
             position: absolute;
             top: 50%;
@@ -150,7 +144,6 @@
             to   { transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg); }
         }
 
-        /* --- STYLE A PROPOS --- */
         .about-text {
             text-align: center;
             max-width: 800px;
@@ -161,7 +154,6 @@
         }
         .highlight { color: var(--primary); font-weight: bold; }
 
-        /* --- MODAL (POPUP) --- */
         .modal {
             display: none; 
             position: fixed;
@@ -237,7 +229,6 @@
             z-index: 1;
         }
 
-        /* --- 5. CARTES & AUTRES --- */
         .timeline-box { border-left: 3px solid var(--card-bg); margin-left: 20px; padding-left: 30px; }
         .timeline-item { position: relative; margin-bottom: 40px; }
         .timeline-item::before {
@@ -344,7 +335,7 @@
             <div class="timeline-box">
                 <div class="timeline-item">
                     <span style="color: var(--primary); font-weight:bold;">2024 - 2027</span>
-                    <h3>BUT Informatique (Parcours A)</h3>
+                    <h3>BUT Informatique (Parcours B)</h3>
                     <p style="color: var(--text-muted);">IUT de Villeneuve-d'Ascq</p>
                 </div>
                 <div class="timeline-item">
@@ -447,7 +438,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             
-            // --- 1. GESTION DE LA MODALE ---
             const modal = document.getElementById("cvModal");
             const navCvBtn = document.getElementById("navCvBtn"); 
             const btnClose = document.getElementsByClassName("close-modal")[0];
@@ -472,7 +462,6 @@
                 }
             }
 
-            // --- 2. NUAGE DE TAGS ---
             const tags = [
                 { text: "HTML / CSS", type: "tech" },
                 { text: "Java", type: "tech" },
@@ -513,7 +502,6 @@
                 container.appendChild(el);
             });
 
-            // --- 3. TYPE WRITER ---
             const text = "Étudiant en Informatique";
             const typingElement = document.getElementById('typing-text');
             let i = 0;
@@ -526,7 +514,6 @@
             }
             typeWriter();
 
-            // --- 4. UI GENERALE ---
             const backToTopBtn = document.getElementById("backToTop");
             const counterBtn = document.getElementById('clickCounter');
             const reveals = document.querySelectorAll(".reveal");
